@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structured Workout</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .exercise-button {
+            display: inline-block;
+            margin: 20px;
+            padding: 15px 30px;
+            font-size: 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .exercise-button:hover {
+            background-color: #45a049;
+        }
+        #timer {
+            font-size: 24px;
+            margin-top: 20px;
+            display: none; /* Initially hidden */
+        }
+        #video-feed img {
+            width: 640px;
+            height: 480px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="exercise-title">Starting Structured Workout</h1>
+        <div id="video-feed"></div>
+        <button id="end-set" class="exercise-button">End Set</button>
+        <div id="timer"></div>
+    </div>
+
+    <script>
+        let exercises = [
+            {name: "Bicep Curls", url: "{{ url_for('views.bicep_curl_feed') }}"},
+            {name: "Bench Press", url: "{{ url_for('views.bench_press_feed') }}"},
+            {name: "Squats", url: "{{ url_for('views.squat_feed') }}"},
+            {name: "Pull-Down", url: "{{ url_for('views.pull_down_feed') }}"},
+            {name: "Shoulder Press", url: "{{ url_for('views.shoulder_press_feed') }}"}
+        ];
+        let currentExercise = 0;
+        let setsRemaining = 2;
+        let breakDuration = 10;
+        let inBreak = false;
+        let timerInterval = null;
+
+        function loadExercise() {
+            if (currentExercise < exercises.length) {
+                let exercise = exercises[currentExercise];
+                document.getElementById('exercise-title').innerText = `Exercise: ${exercise.name}`;
+                document.getElementById('video-feed').innerHTML = `<img src="${exercise.url}" alt="${exercise.name} Feed" />`;
+                startBreakTimer(breakDuration, false); // Start with a break before the first set
+            } else {
+                document.getElementById('exercise-title').innerText = "Workout Complete!";
+                document.getElementById('video-feed').innerHTML = '';
+                document.getElementById('end-set').style.display = 'none';
+                document.getElementById('timer').style.display = 'none';
+            }
+        }
+
+        function startExerciseSet() {
+            document.getElementById('timer').style.display = 'none'; // Hide timer during exercise
+            document.getElementById('end-set').style.display = 'block'; // Show the End Set button during exercise
+            inBreak = false;
+            document.getElementById('video-feed').style.display = 'block'; // Ensure video feed is visible
+        }
+
+        function startBreakTimer(seconds, isBetweenSets) {
+            let timerElement = document.getElementById('timer');
+            clearInterval(timerInterval); // Clear any existing interval
+            let timeLeft = seconds;
+            timerElement.innerText = timeLeft;
+            timerElement.style.display = 'block'; // Show timer during break
+            document.getElementById('end-set').style.display = 'none'; // Hide the End Set button during the break
+            document.getElementById('video-feed').style.display = 'none'; // Hide the video feed during the break
+
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                timerElement.innerText = timeLeft;
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    timerElement.style.display = 'none'; // Hide timer when done
+                    if (isBetweenSets) {
+                        if (setsRemaining > 0) {
+                            startExerciseSet(); // Start the next set
+                        } else {
+                            setsRemaining = 2; // Reset sets for the next exercise
+                            currentExercise++;
+                            loadExercise(); // Load the next exercise
+                        }
+                    } else {
+                        startExerciseSet(); // Start the first set
+                    }
+                }
+            }, 1000);
+        }
+
+        document.getElementById('end-set').addEventListener('click', () => {
+            if (!inBreak) {
+                setsRemaining--; // Decrease the remaining sets
+                inBreak = true;
+
+                if (setsRemaining > 0) {
+                    // If there are sets remaining, start a break before the next set
+                    startBreakTimer(breakDuration, true);
+                } else {
+                    // If this was the last set, move directly to the next exercise
+                    setsRemaining = 2; // Reset sets for the next exercise
+                    currentExercise++;
+                    loadExercise(); // Load the next exercise without a break
+                }
+            }
+        });
+
+        window.onload = () => {
+            loadExercise(); // Start by loading the first exercise
+        };
+    </script>
+</body>
+</html>
