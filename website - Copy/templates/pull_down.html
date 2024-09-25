@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pull-Down Detection</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        img {
+            width: 640px;
+            height: 480px;
+            display: block;
+            margin: 0 auto;
+        }
+        .exercise-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .exercise-button:hover {
+            background-color: #45a049;
+        }
+        #message {
+            font-size: 24px;
+            color: red;
+            margin-top: 20px;
+        }
+        #back-button {
+            display: none;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        #back-button:hover {
+            background-color: #0056b3;
+        }
+        #weight-input-container {
+            display: block;
+            margin: 20px 0;
+        }
+        #weight-input {
+            font-size: 18px;
+            padding: 10px;
+            width: 80px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pull-Down Detection</h1>
+
+        <!-- Weight Input -->
+        <div id="weight-input-container">
+            <label for="weight-input">Enter Weight (lbs): </label>
+            <input type="number" id="weight-input" placeholder="lbs" />
+            <button id="start-set" class="exercise-button">Start Set</button>
+        </div>
+
+        <!-- Video feed -->
+        <img id="video-feed" src="{{ url_for('views.pull_down_feed') }}" alt="Pull-Down Feed" style="display: none;" />
+
+        <!-- End Set button (hidden initially) -->
+        <button id="end-set" class="exercise-button" style="display: none;">End Set</button>
+
+        <!-- Message area for set completion -->
+        <div id="message"></div>
+
+        <!-- Back to Freestyle button -->
+        <a href="{{ url_for('views.index') }}" id="back-button" class="exercise-button" style="display: none;">Back to Freestyle</a>
+    </div>
+
+    <script>
+        let weight = 0;
+
+        // Fetch reps from the backend
+        async function getReps() {
+            const response = await fetch('/views/get_reps');
+            const data = await response.json();
+            return data.reps;  // Assuming the backend responds with { reps: number }
+        }
+
+        // Event listener for "Start Set" button to input weight and start the set
+        document.getElementById('start-set').addEventListener('click', () => {
+            const weightInput = document.getElementById('weight-input').value;
+            if (weightInput && weightInput > 0) {
+                weight = weightInput;
+                // Hide the weight input section
+                document.getElementById('weight-input-container').style.display = 'none';
+                
+                // Show the video feed and "End Set" button
+                document.getElementById('video-feed').style.display = 'block';
+                document.getElementById('end-set').style.display = 'block';
+            } else {
+                alert("Please enter a valid weight!");
+            }
+        });
+
+        // Event listener for the "End Set" button
+        document.getElementById('end-set').addEventListener('click', async () => {
+            const reps = await getReps();  // Fetch the reps from the backend
+
+            // Display the set completed message
+            document.getElementById('message').innerText = `Set Completed! You did ${reps} reps of ${weight} lbs!`;
+
+            // Hide the video feed and end set button
+            document.getElementById('video-feed').style.display = 'none';
+            document.getElementById('end-set').style.display = 'none';
+            document.getElementById('back-button').style.display = 'inline-block';
+
+            // Send the exercise type, reps, and weight to the server to save in the database
+            const exercise = 'Pull-Down';  // Set the exercise type to Pull-Down
+
+            fetch('/views/save_pull_down_set', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    exercise: exercise,  // Sending exercise type
+                    weight: weight,      // Sending weight value
+                    reps: reps           // Sending reps count
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("Backend Response: ", data);  // Log the success message
+                alert(data.message);
+            })
+            .catch(error => console.error('Error:', error));  // Log any errors
+
+            // Reset the reps count after saving
+            fetch('/views/reset_reps', { method: 'POST' })
+                .then(response => response.text())
+                .then(data => console.log(data));
+        });
+    </script>
+</body>
+</html>
