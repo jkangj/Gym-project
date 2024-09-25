@@ -9,7 +9,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 db.init_app(app)
 bcrypt.init_app(app)
 login_manager.init_app(app)
-# hello john
+
 app.register_blueprint(views, url_prefix="/views")
 
 if __name__ == '__main__':
