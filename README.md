@@ -77,7 +77,30 @@
 
 ## Project Structure
 ```
-vitalitas/ │ ├── templates/ # HTML templates for the Flask app │ ├── bench_press.html # Bench Press detection page │ ├── bicep_curl.html # Bicep Curl detection page │ ├── squat.html # Squat detection page │ ├── pull_down.html # Pull-Down detection page │ ├── shoulder_press.html # Shoulder Press detection page │ ├── home.html # Home page with workout options │ ├── login.html # Login page │ ├── register.html # Registration page │ ├── my_exercises.html # User's exercise history │ ├── structured.html # Structured workout mode page │ └── freestyle.html # Freestyle exercise selection page │ ├── app.py # Main Flask application ├── views.py # Route definitions for the Flask app ├── models.py # Database models for user and exercise data ├── static/ # Static files (CSS, images, etc.) │ └── images/ # Image assets like the Vitalitas logo ├── requirements.txt # Python dependencies └── README.md # Project documentation (this file)
+vitalitas/
+│
+├── templates/            # HTML templates for the Flask app
+│   ├── bench_press.html  # Bench Press detection page
+│   ├── bicep_curl.html   # Bicep Curl detection page
+│   ├── squat.html        # Squat detection page
+│   ├── pull_down.html    # Pull-Down detection page
+│   ├── shoulder_press.html # Shoulder Press detection page
+│   ├── home.html         # Home page with workout options
+│   ├── login.html        # Login page
+│   ├── register.html     # Registration page
+│   ├── my_exercises.html # User's exercise history
+│   ├── structured.html   # Structured workout mode page
+│   └── freestyle.html    # Freestyle exercise selection page
+│
+├── app.py                # Main Flask application
+├── views.py              # Route definitions for the Flask app
+├── models.py             # Database models for user and exercise data
+├── static/               # Static files (CSS, images, etc.)
+│   └── images/           # Image assets like the Vitalitas logo
+├── requirements.txt      # Python dependencies
+└── README.md             # Project documentation (this file)
+
+
 ```
 
 
