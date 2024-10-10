@@ -32,7 +32,7 @@
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/username/vitalitas.git
+    git clone https://github.com/jkangj/Gym-project
     cd vitalitas
     ```
 
@@ -119,4 +119,4 @@ This project is licensed under the MIT License. See the `LICENSE` file for more 
 
 ## Contact
 
-For questions or support, please reach out to [email@example.com].
+For questions or support, please reach out to [joo-eon.kang@sstx.org].
