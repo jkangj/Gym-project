@@ -2,6 +2,26 @@
 
 **Vitalitas** is an AI-driven workout companion designed to assist users in performing exercises with real-time feedback. It offers functionalities like rep counting, exercise tracking, and both structured and freestyle workout plans to enhance the training experience.  
 
+## Example Run Through 
+
+Login Screen </b>
+
+<img src="https://github.com/user-attachments/assets/886aa7f8-6265-4391-80d6-40d5c4dd491d" width="400"/>
+
+Home Screen </b>
+
+<img src="https://github.com/user-attachments/assets/c41a9d90-3c03-4c33-b552-a6b0d88a85e2" width="400"/>
+
+Freestyle Screen </b>
+
+<img src="https://github.com/user-attachments/assets/bb067bee-d0db-4ebb-a2d0-9f418fdcf097" width="400"/>
+
+Bicep Curl Weight Selection Screen </b>
+
+<img src="https://github.com/user-attachments/assets/007ab445-c598-4912-bfe0-22f5d043f8f3" width="400"/>
+
+
+
 ## Features
 
 - **Real-time Pose Tracking**: Uses AI to detect and count reps during various exercises like bench press, bicep curls, squats, pull-downs, and shoulder presses.
