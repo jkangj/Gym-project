@@ -1,10 +1,6 @@
 # Vitalitas - AI-Powered Gym Companion
 
-**Vitalitas** is an AI-driven workout companion designed to assist users in performing exercises with real-time feedback. It offers functionalities like rep counting, exercise tracking, and both structured and freestyle workout plans to enhance the training experience.
-
-## Demo
-
-![Screenshot of Vitalitas Homepage](static/Images/Login Screen.png)   
+**Vitalitas** is an AI-driven workout companion designed to assist users in performing exercises with real-time feedback. It offers functionalities like rep counting, exercise tracking, and both structured and freestyle workout plans to enhance the training experience.  
 
 ## Features
 
