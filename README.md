@@ -4,7 +4,7 @@
 
 ## Demo
 
-![Screenshot of Vitalitas Homepage](static\Images\Login Screen.png") 
+![Screenshot of Vitalitas Homepage](static\Images\Login Screen.png")  
 
 ## Features
 
