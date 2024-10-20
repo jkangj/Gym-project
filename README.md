@@ -83,7 +83,7 @@ Bicep Curl Weight Selection Screen </b>
     flask run
     ```
 
-6. Access the app at `http://localhost:5000`.
+6. Access the app at `http://localhost:8000`.
 
 ## Usage
 
