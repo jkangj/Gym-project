@@ -47,43 +47,6 @@ Bicep Curl Weight Selection Screen </b>
 - Python 3.8+
 - Virtual environment tool (e.g., `venv` or `virtualenv`)
 
-### Setup
-
-1. Clone the repository:
-
-    ```bash
-    git clone https://github.com/jkangj/Gym-project
-    cd vitalitas
-    ```
-
-2. Create a virtual environment:
-
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate  # On Windows: venv\Scripts\activate
-    ```
-
-3. Install the dependencies:
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4. Set up the database:
-
-    ```bash
-    flask db init
-    flask db migrate
-    flask db upgrade
-    ```
-
-5. Run the Flask server:
-
-    ```bash
-    flask run
-    ```
-
-6. Access the app at `http://localhost:8000`.
 
 ## Usage
 
