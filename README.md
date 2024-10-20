@@ -114,7 +114,6 @@ vitalitas/
 │
 ├── app.py                # Main Flask application
 ├── views.py              # Route definitions for the Flask app
-├── models.py             # Database models for user and exercise data
 ├── static/               # Static files (CSS, images, etc.)
 │   └── images/           # Image assets like the Vitalitas logo
 ├── requirements.txt      # Python dependencies
