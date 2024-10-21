@@ -20,6 +20,15 @@ Bicep Curl Weight Selection Screen </b>
 
 <img src="https://github.com/user-attachments/assets/007ab445-c598-4912-bfe0-22f5d043f8f3" width="400"/>
 
+Henry, one of my football teamates, doing curls </b>
+
+<img src="https://github.com/user-attachments/assets/9331161c-d91b-4b32-bbde-b108c0ae147b" width="400"/>
+
+Post Set Screen
+
+<img src="https://github.com/user-attachments/assets/e6db0b28-eb1c-4ca6-91bf-96722d40591b" width="400"/>
+
+
 
 
 ## Features
