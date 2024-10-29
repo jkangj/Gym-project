@@ -2,7 +2,14 @@
 
 **Vitalitas** is an AI-driven workout companion designed to assist users in performing exercises with real-time feedback. It offers functionalities like rep counting, exercise tracking, and both structured and freestyle workout plans to enhance the training experience. Though in prototype right now, Vitalitas will soon be available to the public via website. Once Vitalitas is hosted, a link to the website will be added to this readme. 
 
-## Example Run Through 
+
+## Short Clip of Bench Press Functionality
+
+
+![Bench Press Demo](https://github.com/user-attachments/assets/bca43fec-bba2-4984-a7e8-dde54e5ea97f)
+
+
+## Example Run Through of a Set of Bicep Curls 
 
 Login Screen </b>
 
@@ -27,13 +34,6 @@ Henry, one of my football teamates, doing curls </b>
 Post Set Screen
 
 <img src="https://github.com/user-attachments/assets/e6db0b28-eb1c-4ca6-91bf-96722d40591b" width="400"/>
-
-
-## Short Clip of Bench Press Functionality
-
-
-![Bench Press Demo](https://github.com/user-attachments/assets/bca43fec-bba2-4984-a7e8-dde54e5ea97f)
-
 
 
 
