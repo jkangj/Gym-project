@@ -69,7 +69,7 @@ Post Set Screen
 
 ## Project Structure
 ```
-vitalitas/
+website/
 │
 ├── templates/            # HTML templates for the Flask app
 │   ├── bench_press.html  # Bench Press detection page
@@ -89,7 +89,6 @@ vitalitas/
 ├── static/               # Static files (CSS, images, etc.)
 │   └── images/           # Image assets like the Vitalitas logo
 ├── requirements.txt      # Python dependencies
-└── README.md             # Project documentation (this file)
 
 
 ```
