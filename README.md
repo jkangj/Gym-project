@@ -29,6 +29,12 @@ Post Set Screen
 <img src="https://github.com/user-attachments/assets/e6db0b28-eb1c-4ca6-91bf-96722d40591b" width="400"/>
 
 
+## Short Clip of Bench Press Functionality
+
+
+![Bench Press Demo](https://github.com/user-attachments/assets/bca43fec-bba2-4984-a7e8-dde54e5ea97f)
+
+
 
 
 ## Features
