@@ -16,7 +16,7 @@
 ## Short Clip of Bench Press Functionality
 
 
-![Bench Press Demo](https://github.com/user-attachments/assets/bca43fec-bba2-4984-a7e8-dde54e5ea97f)
+![Bench Press Demo](Vitalitas/website/Bench_Press_Demo.gif)
 
 
 ## Screenshot of Bench Press Tutorial/Safety Page
