@@ -2,11 +2,26 @@
 
 **Vitalitas** is an AI-driven workout companion designed to assist users in performing exercises with real-time feedback. It offers functionalities like rep counting, exercise tracking, and both structured and freestyle workout plans to enhance the training experience. Though in prototype right now, Vitalitas will soon be available to the public via website. Once Vitalitas is hosted, a link to the website will be added to this readme. Vitalitas is partly inspired by Nicholas Renotte ([https://www.youtube.com/watch?v=06TE_U21FK4](https://www.youtube.com/@NicholasRenotte)).
 
+## Features
+
+- **Real-time Pose Tracking**: Uses AI to detect and count reps during various exercises like bench press, bicep curls, squats, pull-downs, and shoulder presses.
+- **Exercise Tutorials and Safety**: Clear pages of instruction for fluid and safe sets of exercises.
+- **Structured & Freestyle Workouts**: 
+  - *Freestyle Mode*: Select specific exercises and perform sets with real-time feedback.
+  - *Structured Mode*: Follow a guided workout routine with built-in rest periods and automatic exercise transitions.
+- **Exercise History**: Track and manage past workouts, including reps, weight, and dates.
+- **User Authentication**: Secure login and registration system with the option to access as a guest.
+- **Responsive Web Interface**: User-friendly design that adapts to both desktop and mobile devices.
 
 ## Short Clip of Bench Press Functionality
 
 
 ![Bench Press Demo](https://github.com/user-attachments/assets/bca43fec-bba2-4984-a7e8-dde54e5ea97f)
+
+
+## Screenshot of Bench Press Tutorial/Safety Page
+
+![image](https://github.com/user-attachments/assets/9547e6e1-689b-4c7c-a996-4aad3124e58a)
 
 
 ## Example Run Through of a Set of Bicep Curls 
