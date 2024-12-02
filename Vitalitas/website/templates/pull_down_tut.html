@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulldown Tutorial - Vitalitas</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            text-align: center;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .container {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .step {
+            margin: 20px 0;
+        }
+        .step h2 {
+            color: #4CAF50;
+        }
+        .home-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .home-link:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Pulldown Tutorial
+    </header>
+    <div class="container">
+        <div class="step">
+            <h2>Step 1: Starting Position</h2>
+            <p>Grip the bar slightly wider than shoulder-width, with your arms fully extended overhead. Sit upright with your chest up and your feet flat on the floor.</p>
+            <p><strong>Arm Angle:</strong> Begin with an arm angle of approximately 160 degrees between your shoulder, elbow, and wrist.</p>
+        </div>
+        <div class="step">
+            <h2>Step 2: Pull the Bar Down</h2>
+            <p>Pull the bar down towards your chest in a controlled motion while keeping your elbows pointed downward. Focus on contracting your back muscles.</p>
+            <p><strong>Target Arm Angle:</strong> Aim to bring the angle between your shoulder, elbow, and wrist to approximately 45 degrees.</p>
+        </div>
+        <div class="step">
+            <h2>Step 3: Return to Starting Position</h2>
+            <p>Slowly let the bar return to the starting position, fully extending your arms while maintaining control.</p>
+            <p><strong>Return to Starting Arm Angle:</strong> Allow your arms to extend back to approximately 160 degrees.</p>
+        </div>
+        <div class="step">
+            <h2>Step 4: Complete the Repetition</h2>
+            <p>Each repetition should take at least 1 second to complete. Avoid using momentum to pull the bar and focus on controlled movement.</p>
+        </div>
+        <a href="{{ url_for('views.tutorial') }}" class="home-link">Back to Tutorials</a>
+    </div>
+</body>
+</html>

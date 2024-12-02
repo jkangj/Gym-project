@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial and Safety - Vitalitas</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .button-container {
+            margin: 40px auto;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .tutorial-button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .tutorial-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Tutorial and Safety
+    </header>
+    <div class="button-container">
+        <a href="{{ url_for('views.bicep_curl_tut') }}" class="tutorial-button">Bicep Curl</a>
+        <a href="{{ url_for('views.bench_press_tut') }}" class="tutorial-button">Bench Press</a>
+        <a href="{{ url_for('views.squat_tut') }}" class="tutorial-button">Squat</a>
+        <a href="{{ url_for('views.pull_down_tut') }}" class="tutorial-button">Pulldown</a>
+        <a href="{{ url_for('views.shoulder_press_tut') }}" class="tutorial-button">DB Shoulder Press</a>
+    </div>
+</body>
+</html>

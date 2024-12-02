@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bicep Curl Tutorial - Vitalitas</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            text-align: center;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .container {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .step {
+            margin: 20px 0;
+        }
+        .step h2 {
+            color: #4CAF50;
+        }
+        .home-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .home-link:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Bicep Curl Tutorial
+    </header>
+    <div class="container">
+        <div class="step">
+            <h2>Step 1: Starting Position</h2>
+            <p>Stand upright with a dumbbell in each hand and your arms fully extended. Your palms should be facing forward. Ensure your elbows are close to your torso.</p>
+            <p><strong>Arm Angle:</strong> Aim for a starting angle of approximately 160 degrees between your shoulder, elbow, and wrist.</p>
+        </div>
+        <div class="step">
+            <h2>Step 2: Curl the Dumbbells</h2>
+            <p>Slowly curl the dumbbells while keeping your upper arms stationary. Focus on contracting your biceps as you lift the weights.</p>
+            <p><strong>Target Arm Angle:</strong> Bring the angle between your shoulder, elbow, and wrist to approximately 30 degrees.</p>
+        </div>
+        <div class="step">
+            <h2>Step 3: Lower the Dumbbells</h2>
+            <p>Gradually lower the dumbbells back to the starting position. Avoid letting the weights drop too quickly to maintain control.</p>
+            <p><strong>Return to Starting Arm Angle:</strong> Allow the angle to return to approximately 160 degrees.</p>
+        </div>
+        <div class="step">
+            <h2>Step 4: Complete the Repetition</h2>
+            <p>Make sure each repetition takes at least 1 second to complete to maximize effectiveness. Keep your movements slow and controlled.</p>
+        </div>
+        <a href="{{ url_for('views.tutorial') }}" class="home-link">Back to Tutorials</a>
+    </div>
+</body>
+</html>

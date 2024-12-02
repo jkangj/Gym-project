@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squat Tutorial - Vitalitas</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            text-align: center;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .container {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .warning {
+            color: #d32f2f;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .step {
+            margin: 20px 0;
+        }
+        .step h2 {
+            color: #4CAF50;
+        }
+        .home-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .home-link:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Squat Tutorial
+    </header>
+    <div class="container">
+        <p class="warning">
+            Warning: Ensure proper form when squatting to avoid injury. Maintain a manageable weight and use a spotter if necessary.
+        </p>
+        <div class="step">
+            <h2>Step 1: Starting Position</h2>
+            <p>Stand with your feet shoulder-width apart, toes slightly pointed outward, and a barbell or dumbbells positioned securely.</p>
+            <p><strong>Starting Angle:</strong> Keep your hips, knees, and ankles aligned with an angle of approximately 160 degrees.</p>
+        </div>
+        <div class="step">
+            <h2>Step 2: Lower into the Squat</h2>
+            <p>Slowly lower your body by bending your knees and pushing your hips back. Keep your chest up and your back straight.</p>
+            <p><strong>Target Angle:</strong> Lower until the angle between your hip, knee, and ankle is approximately 90 degrees.</p>
+        </div>
+        <div class="step">
+            <h2>Step 3: Return to Standing Position</h2>
+            <p>Press through your heels to return to the starting position. Keep the movement controlled and avoid locking your knees at the top.</p>
+            <p><strong>Return to Starting Angle:</strong> Return to an angle of approximately 160 degrees.</p>
+        </div>
+        <div class="step">
+            <h2>Step 4: Complete the Repetition</h2>
+            <p>Each repetition should take at least 2 seconds to complete. Focus on form and control to maximize effectiveness.</p>
+        </div>
+        <a href="{{ url_for('views.tutorial') }}" class="home-link">Back to Tutorials</a>
+    </div>
+</body>
+</html>

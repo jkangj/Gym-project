@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoulder Press Tutorial - Vitalitas</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            text-align: center;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .container {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .step {
+            margin: 20px 0;
+        }
+        .step h2 {
+            color: #4CAF50;
+        }
+        .home-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .home-link:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Shoulder Press Tutorial
+    </header>
+    <div class="container">
+        <div class="step">
+            <h2>Step 1: Starting Position</h2>
+            <p>Stand upright or sit on a bench with back support. Hold a dumbbell in each hand at shoulder height with your palms facing forward.</p>
+            <p><strong>Arm Angle:</strong> Begin with your arms bent at approximately 45 degrees between your shoulder, elbow, and wrist.</p>
+        </div>
+        <div class="step">
+            <h2>Step 2: Press the Dumbbells Up</h2>
+            <p>Push the dumbbells upward until your arms are fully extended above your head. Avoid locking your elbows to maintain tension.</p>
+            <p><strong>Target Arm Angle:</strong> Extend your arms to an angle of approximately 160 degrees.</p>
+        </div>
+        <div class="step">
+            <h2>Step 3: Lower the Dumbbells</h2>
+            <p>Slowly lower the dumbbells back to the starting position while keeping control of the weights.</p>
+            <p><strong>Return to Starting Arm Angle:</strong> Lower until your arms return to approximately 45 degrees.</p>
+        </div>
+        <div class="step">
+            <h2>Step 4: Complete the Repetition</h2>
+            <p>Each repetition should take at least 1 second to complete. Focus on form and controlled movements for maximum effectiveness.</p>
+        </div>
+        <a href="{{ url_for('views.tutorial') }}" class="home-link">Back to Tutorials</a>
+    </div>
+</body>
+</html>

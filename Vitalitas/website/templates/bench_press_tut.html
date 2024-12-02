@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bench Press Tutorial - Vitalitas</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            text-align: center;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .container {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .warning {
+            color: #d32f2f;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .step {
+            margin: 20px 0;
+        }
+        .step h2 {
+            color: #4CAF50;
+        }
+        .home-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .home-link:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Bench Press Tutorial
+    </header>
+    <div class="container">
+        <p class="warning">
+            Warning: Always use a spotter when bench pressing and ensure you are lifting a manageable weight to avoid injury.
+        </p>
+        <div class="step">
+            <h2>Step 1: Starting Position</h2>
+            <p>Lie flat on a bench with your feet planted firmly on the floor. Grip the barbell slightly wider than shoulder-width, with your arms fully extended.</p>
+            <p><strong>Arm Angle:</strong> Begin with an arm angle of approximately 160 degrees between your shoulder, elbow, and wrist.</p>
+        </div>
+        <div class="step">
+            <h2>Step 2: Lower the Barbell</h2>
+            <p>Slowly lower the barbell to your chest while keeping your elbows at a 45-degree angle to your torso.</p>
+            <p><strong>Target Arm Angle:</strong> Lower the barbell until the angle between your shoulder, elbow, and wrist is approximately 80 degrees.</p>
+        </div>
+        <div class="step">
+            <h2>Step 3: Press the Barbell Up</h2>
+            <p>Push the barbell back up to the starting position in a controlled manner. Focus on engaging your chest and triceps.</p>
+            <p><strong>Return to Starting Arm Angle:</strong> Return to an arm angle of approximately 160 degrees at the top of the press.</p>
+        </div>
+        <div class="step">
+            <h2>Step 4: Complete the Repetition</h2>
+            <p>Ensure each repetition takes at least 1 second to complete. Avoid locking your elbows at the top to maintain tension on your muscles.</p>
+        </div>
+        <a href="{{ url_for('views.tutorial') }}" class="home-link">Back to Tutorials</a>
+    </div>
+</body>
+</html>
