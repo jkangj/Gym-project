@@ -19,7 +19,7 @@
 ![Bench Press Demo](Vitalitas/website/Bench_Press_Demo.gif)
 
 
-## Screenshot of One of the Tutorial/Safety Pages: Bench Press
+## Screenshot of one of the Tutorial/Safety Pages: Bench Press
 
 ![image](https://github.com/user-attachments/assets/9547e6e1-689b-4c7c-a996-4aad3124e58a)
 
